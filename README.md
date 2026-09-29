@@ -15,7 +15,7 @@ A small Streamlit app that lets you upload a CSV file and ask questions about it
 - Python 3.10+
 - Streamlit for the web interface
 - LangChain (`langchain-experimental` CSV agent, `langchain-openai`)
-- OpenAI completion model (`gpt-3.5-turbo-instruct`, the `langchain-openai` default) at temperature 0
+- OpenAI `gpt-4o-mini` chat model at temperature 0
 - pandas
 - python-dotenv for loading the API key
 

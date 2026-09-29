@@ -3,7 +3,7 @@ import os
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 
 
 def main():
@@ -21,7 +21,7 @@ def main():
         # The agent answers by running pandas code on the data, which
         # langchain_experimental only allows with an explicit opt-in.
         agent = create_csv_agent(
-            OpenAI(temperature=0),
+            ChatOpenAI(model="gpt-4o-mini", temperature=0),
             csv_file,
             verbose=True,
             allow_dangerous_code=True,
